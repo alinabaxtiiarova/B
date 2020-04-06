@@ -6,5 +6,7 @@ def repeat_all_messages(message):
     bot.send_message(message.chat.id, message.text)
     if message.text == "Привет":
         bot.send_message(message.from_user.id, "Привет, чем я могу тебе помочь?")
+    else :
+        bot.send_message(message.from_user.id, "Доброй ночи!")
 
 bot.polling(none_stop = True, interval = 0)
