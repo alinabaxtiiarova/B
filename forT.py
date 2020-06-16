@@ -1,8 +1,6 @@
 import telebot
 from telebot import types
 bot = telebot.TeleBot('1141594126:AAGOHEhs7hFHMEUwJlYZOsjeDMf73JscbuY')
-import keyboards as kb
-
 
 @bot.message_handler(commands=['trello'])
 def open_website(message):
@@ -20,13 +18,7 @@ def open_website(message):
 def repeat_all_messages(message): 
     bot.send_message(message.chat.id, message.text)
     if message.text == "Привет":
-        bot.send_message("Привет, чем я могу тебе помочь?")
+        bot.send_message(message.from_user.id, "Привет, чем я могу тебе помочь?")
     else :
         bot.send_message(message.from_user.id, "Доброй ночи!")
-        
-
-#@dp.message_handler(commands=['start'])
-#async def process_start_command(message: types.Message):
-#    await message.reply('Ghbdt', reply_markup=kb.greet_kb
-
 bot.polling(none_stop = True, interval = 0)
