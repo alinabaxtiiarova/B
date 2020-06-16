@@ -21,5 +21,15 @@ def repeat_all_messages(message):
         bot.send_message("Привет, чем я могу тебе помочь?")
     else :
         bot.send_message(message.from_user.id, "Доброй ночи!")
+        
+from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+button_hi1 = KeyboardButton('shshhsh')
+
+greet_kb = ReplyKeyboardMarkup()
+greet_kb.add(button_hi)
+
+@dp.message_handler(commands=['start'])
+async def process_start_command(massage: types.Message):
+    await message.reply('Ghbdt', reply_markup=kb.greet_kb
 
 bot.polling(none_stop = True, interval = 0)
