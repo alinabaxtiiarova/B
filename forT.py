@@ -20,9 +20,4 @@ def repeat_all_messages(message):
     else :
         bot.send_message(message.from_user.id, "Доброй ночи!")
 
-
-@dp.message_handler(commands=['start'])
-async def process_start_command(message: types.Message):
-    await message.reply('Ghbdt', reply_markup=kb.greet_kb
-
 bot.polling(none_stop = True, interval = 0)
